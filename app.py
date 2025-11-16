@@ -26,7 +26,7 @@ best_component = mtbur.idxmax()
 worst_component = mtbur.idxmin()
 
 col1, col2, col3, col4, col5 = st.columns(5)
-col1.metric("Total Failures YTD", total_failures)
+col1.metric("Total Failures (2024)", total_failures)
 col2.metric("Total Components", total_components)
 col3.metric("Total Downtime Hours", round(total_downtime,2))
 col4.metric("Best Component (Highest MTBUR)", best_component)
@@ -40,7 +40,7 @@ st.header("Charts Section")
 col1, col2 = st.columns(2)
 with col1:
     # 1. Failure Trend per Month
-    df['month'] = pd.to_datetime(df['failure_date']).dt.to_period('M')
+    df['month'] = pd.to_datetime(df['failure_date']).dt.strftime('%b')
     monthly_failure = df.groupby('month')['unscheduled_removal'].sum()
     st.subheader("Failure Trend per Month")
     st.bar_chart(monthly_failure, height=250, use_container_width=True)
