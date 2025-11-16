@@ -76,7 +76,7 @@ ax.bar(pareto.index, pareto.values)
 ax2 = ax.twinx()
 ax2.plot(pareto.index, cumulative_percent, color='red', marker='o', ms=5)
 ax2.set_ylabel("Cumulative %")
-plt.xticks(rotation=45)
+plt.xticks(rotation=45, ha='right')
 st.pyplot(fig)
 
 # 6. Reliability Trend per Component
