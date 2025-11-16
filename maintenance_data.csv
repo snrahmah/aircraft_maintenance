@@ -1,0 +1,201 @@
+aircraft_id,ata_chapter,component_name,failure_date,hours_since_install,unscheduled_removal,downtime_hours,base_location,remarks,failure_year,failure_month,failure_week
+ACF010,32,Shock Strut,2024-06-22,1125,0,9.7,CGK,Bearing worn out,2024,6,25
+ACF003,32,Wheel Actuator,2024-09-27,1625,0,13.5,DPS,Overheat detected,2024,9,39
+ACF001,23,Navigation Receiver,2024-12-22,897,0,12.6,DPS,Pressure leak,2024,12,51
+ACF004,32,Wheel Actuator,2024-10-21,2923,0,8.0,CGK,Bearing worn out,2024,10,43
+ACF001,32,Shock Strut,2024-07-14,1389,0,7.3,CGK,Bearing worn out,2024,7,28
+ACF008,72,Engine Starter,2024-12-19,2550,0,2.8,DPS,Overheat detected,2024,12,51
+ACF004,72,Engine Starter,2024-08-13,2491,0,8.1,DPS,Pressure leak,2024,8,33
+ACF006,32,Brake Assembly,2024-09-28,1212,1,20.9,DPS,Sensor fault,2024,9,39
+ACF007,32,Wheel Actuator,2024-10-02,2628,1,16.6,SUB,Pressure leak,2024,10,40
+ACF001,23,Radio Altimeter,2024-08-24,2313,1,5.7,DPS,Sensor fault,2024,8,34
+ACF009,72,Fuel Pump,2024-07-25,1399,0,20.6,CGK,Pressure leak,2024,7,30
+ACF009,23,Radio Altimeter,2024-08-05,2516,1,13.4,DPS,Electrical failure,2024,8,32
+ACF001,23,Flight Computer,2024-05-19,2692,1,11.1,SUB,Sensor fault,2024,5,20
+ACF005,32,Wheel Actuator,2024-08-24,2717,0,4.7,DPS,Bearing worn out,2024,8,34
+ACF001,72,Engine Starter,2024-04-15,1399,1,20.7,DPS,Electrical failure,2024,4,16
+ACF008,23,Radio Altimeter,2024-02-16,225,1,10.7,CGK,Bearing worn out,2024,2,7
+ACF009,23,Flight Computer,2024-03-07,2239,1,10.6,SUB,Overheat detected,2024,3,10
+ACF004,32,Shock Strut,2024-03-06,2006,0,11.6,CGK,Overheat detected,2024,3,10
+ACF008,72,Fuel Pump,2024-12-05,2373,0,23.0,DPS,Overheat detected,2024,12,49
+ACF008,72,Engine Starter,2024-07-08,1049,1,6.0,DPS,Pressure leak,2024,7,28
+ACF006,32,Wheel Actuator,2024-03-24,1381,0,2.3,CGK,Sensor fault,2024,3,12
+ACF007,72,Fuel Pump,2024-04-05,1213,0,12.7,DPS,Bearing worn out,2024,4,14
+ACF010,32,Shock Strut,2024-12-24,462,1,19.1,CGK,Overheat detected,2024,12,52
+ACF005,32,Brake Assembly,2024-05-02,977,1,14.1,SUB,Overheat detected,2024,5,18
+ACF008,23,Flight Computer,2024-01-05,1306,0,16.5,DPS,Sensor fault,2024,1,1
+ACF009,23,Flight Computer,2024-03-27,305,1,14.1,DPS,Overheat detected,2024,3,13
+ACF006,32,Brake Assembly,2024-01-02,945,0,15.9,DPS,Sensor fault,2024,1,1
+ACF010,32,Brake Assembly,2024-10-29,935,0,15.8,DPS,Overheat detected,2024,10,44
+ACF001,72,Ignition System,2024-07-31,2189,1,11.7,DPS,Pressure leak,2024,7,31
+ACF009,32,Shock Strut,2024-12-03,1760,1,13.5,SUB,Overheat detected,2024,12,49
+ACF007,32,Shock Strut,2024-02-03,1451,0,13.6,SUB,Sensor fault,2024,2,5
+ACF006,23,Radio Altimeter,2024-10-12,1504,1,21.5,DPS,Bearing worn out,2024,10,41
+ACF006,72,Ignition System,2024-06-09,1210,1,8.2,DPS,Pressure leak,2024,6,23
+ACF003,72,Fuel Pump,2024-06-28,769,1,3.8,CGK,Overheat detected,2024,6,26
+ACF008,23,Navigation Receiver,2024-12-19,842,0,18.3,CGK,Overheat detected,2024,12,51
+ACF004,32,Shock Strut,2024-07-04,897,0,3.8,SUB,Overheat detected,2024,7,27
+ACF010,72,Ignition System,2024-06-21,2214,0,15.3,DPS,Pressure leak,2024,6,25
+ACF009,32,Wheel Actuator,2024-12-04,1974,1,10.0,CGK,Pressure leak,2024,12,49
+ACF010,72,Fuel Pump,2024-03-11,2420,0,10.6,SUB,Overheat detected,2024,3,11
+ACF010,32,Shock Strut,2024-04-01,441,1,10.6,CGK,Sensor fault,2024,4,14
+ACF010,72,Ignition System,2024-10-31,918,1,15.3,CGK,Electrical failure,2024,10,44
+ACF008,23,Flight Computer,2024-05-19,2916,0,16.2,DPS,Bearing worn out,2024,5,20
+ACF004,32,Shock Strut,2024-02-24,1153,0,22.5,CGK,Bearing worn out,2024,2,8
+ACF004,32,Shock Strut,2024-05-26,1011,0,5.5,CGK,Electrical failure,2024,5,21
+ACF001,32,Shock Strut,2024-01-19,2520,0,2.6,CGK,Bearing worn out,2024,1,3
+ACF009,23,Flight Computer,2024-07-30,549,1,21.6,CGK,Pressure leak,2024,7,31
+ACF002,32,Shock Strut,2024-01-04,1052,0,8.6,SUB,Pressure leak,2024,1,1
+ACF008,23,Navigation Receiver,2024-05-22,2837,1,21.2,SUB,Electrical failure,2024,5,21
+ACF010,23,Flight Computer,2024-09-17,1674,0,6.7,DPS,Sensor fault,2024,9,38
+ACF010,72,Fuel Pump,2024-11-25,1183,1,18.5,SUB,Electrical failure,2024,11,48
+ACF005,72,Fuel Pump,2024-11-27,706,1,12.2,CGK,Electrical failure,2024,11,48
+ACF007,32,Shock Strut,2024-09-25,833,0,11.4,SUB,Bearing worn out,2024,9,39
+ACF007,23,Radio Altimeter,2024-11-18,2596,0,4.1,DPS,Sensor fault,2024,11,47
+ACF010,23,Flight Computer,2024-05-02,367,1,23.2,SUB,Pressure leak,2024,5,18
+ACF006,32,Wheel Actuator,2024-07-26,1791,1,13.3,DPS,Bearing worn out,2024,7,30
+ACF008,72,Ignition System,2024-04-02,2265,0,15.6,CGK,Bearing worn out,2024,4,14
+ACF004,23,Navigation Receiver,2024-10-11,328,1,12.7,DPS,Bearing worn out,2024,10,41
+ACF005,72,Engine Starter,2024-04-24,1694,0,19.2,SUB,Electrical failure,2024,4,17
+ACF003,32,Brake Assembly,2024-06-23,2739,1,23.9,DPS,Sensor fault,2024,6,25
+ACF008,72,Ignition System,2024-06-03,1624,0,2.2,CGK,Sensor fault,2024,6,23
+ACF002,72,Ignition System,2024-01-14,2102,1,12.5,DPS,Sensor fault,2024,1,2
+ACF009,72,Fuel Pump,2024-05-08,882,1,2.1,DPS,Pressure leak,2024,5,19
+ACF005,32,Shock Strut,2024-04-30,1153,1,3.5,SUB,Pressure leak,2024,4,18
+ACF010,72,Fuel Pump,2024-07-18,1062,1,10.5,CGK,Bearing worn out,2024,7,29
+ACF003,72,Engine Starter,2024-03-20,357,1,8.7,DPS,Electrical failure,2024,3,12
+ACF010,32,Shock Strut,2024-12-03,718,1,12.4,SUB,Overheat detected,2024,12,49
+ACF005,23,Navigation Receiver,2024-03-01,1158,1,12.8,CGK,Bearing worn out,2024,3,9
+ACF005,23,Radio Altimeter,2024-04-04,2280,0,10.8,CGK,Bearing worn out,2024,4,14
+ACF004,72,Fuel Pump,2024-09-02,171,1,10.5,CGK,Bearing worn out,2024,9,36
+ACF003,32,Brake Assembly,2024-06-13,1169,0,2.8,SUB,Pressure leak,2024,6,24
+ACF008,72,Fuel Pump,2024-12-23,2864,0,16.8,DPS,Sensor fault,2024,12,52
+ACF008,72,Fuel Pump,2024-12-13,827,0,4.1,CGK,Overheat detected,2024,12,50
+ACF003,23,Flight Computer,2024-02-17,2281,0,16.0,SUB,Overheat detected,2024,2,7
+ACF002,23,Radio Altimeter,2024-07-23,1130,0,18.7,CGK,Electrical failure,2024,7,30
+ACF005,72,Ignition System,2024-07-18,549,0,15.9,CGK,Sensor fault,2024,7,29
+ACF003,32,Wheel Actuator,2024-12-18,2204,0,24.0,DPS,Electrical failure,2024,12,51
+ACF004,23,Radio Altimeter,2024-09-07,2201,0,19.9,CGK,Electrical failure,2024,9,36
+ACF009,23,Flight Computer,2024-08-09,577,0,16.5,SUB,Bearing worn out,2024,8,32
+ACF006,32,Shock Strut,2024-12-18,873,0,5.4,DPS,Bearing worn out,2024,12,51
+ACF008,72,Ignition System,2024-12-03,1183,1,13.6,SUB,Electrical failure,2024,12,49
+ACF007,32,Wheel Actuator,2024-09-27,2158,1,7.9,SUB,Overheat detected,2024,9,39
+ACF005,23,Radio Altimeter,2024-08-14,1936,0,8.1,DPS,Overheat detected,2024,8,33
+ACF008,23,Navigation Receiver,2024-09-11,1701,0,11.1,DPS,Bearing worn out,2024,9,37
+ACF010,23,Flight Computer,2024-11-24,2744,0,21.1,CGK,Bearing worn out,2024,11,47
+ACF008,72,Engine Starter,2024-05-17,667,1,13.1,DPS,Overheat detected,2024,5,20
+ACF005,72,Ignition System,2024-05-08,1886,1,13.6,CGK,Overheat detected,2024,5,19
+ACF010,23,Radio Altimeter,2024-02-05,2568,1,3.4,CGK,Pressure leak,2024,2,6
+ACF005,23,Navigation Receiver,2024-06-22,2377,0,19.5,SUB,Bearing worn out,2024,6,25
+ACF004,23,Radio Altimeter,2024-08-17,503,0,14.4,DPS,Bearing worn out,2024,8,33
+ACF009,72,Ignition System,2024-01-29,2843,0,5.6,CGK,Electrical failure,2024,1,5
+ACF004,72,Engine Starter,2024-03-08,1248,1,7.6,CGK,Pressure leak,2024,3,10
+ACF002,72,Ignition System,2024-10-07,1124,1,18.1,CGK,Bearing worn out,2024,10,41
+ACF002,23,Navigation Receiver,2024-09-18,199,0,17.8,SUB,Overheat detected,2024,9,38
+ACF005,23,Navigation Receiver,2024-11-26,653,0,6.8,SUB,Sensor fault,2024,11,48
+ACF005,32,Wheel Actuator,2024-09-26,2742,1,14.2,SUB,Bearing worn out,2024,9,39
+ACF005,32,Wheel Actuator,2024-09-20,788,1,23.7,CGK,Overheat detected,2024,9,38
+ACF004,32,Shock Strut,2024-08-12,1221,0,12.7,DPS,Sensor fault,2024,8,33
+ACF009,32,Shock Strut,2024-04-13,2015,1,16.5,CGK,Pressure leak,2024,4,15
+ACF007,23,Radio Altimeter,2024-07-01,2289,0,16.0,CGK,Bearing worn out,2024,7,27
+ACF007,23,Flight Computer,2024-06-03,1219,0,7.0,SUB,Sensor fault,2024,6,23
+ACF003,32,Brake Assembly,2024-02-14,2479,1,11.1,DPS,Pressure leak,2024,2,7
+ACF006,23,Flight Computer,2024-09-27,1984,0,10.3,DPS,Bearing worn out,2024,9,39
+ACF004,32,Brake Assembly,2024-04-27,1194,0,7.8,DPS,Electrical failure,2024,4,17
+ACF009,72,Fuel Pump,2024-06-26,198,1,14.2,SUB,Sensor fault,2024,6,26
+ACF006,32,Brake Assembly,2024-01-14,2430,1,5.4,DPS,Electrical failure,2024,1,2
+ACF009,72,Fuel Pump,2024-09-09,2717,1,21.1,SUB,Pressure leak,2024,9,37
+ACF009,23,Flight Computer,2024-11-04,1863,0,4.1,DPS,Electrical failure,2024,11,45
+ACF004,23,Navigation Receiver,2024-06-17,1383,1,16.6,DPS,Sensor fault,2024,6,25
+ACF006,32,Wheel Actuator,2024-10-23,2652,1,22.1,CGK,Sensor fault,2024,10,43
+ACF005,23,Flight Computer,2024-07-16,776,0,10.1,DPS,Electrical failure,2024,7,29
+ACF007,72,Engine Starter,2024-08-01,1696,0,21.1,SUB,Bearing worn out,2024,8,31
+ACF008,32,Shock Strut,2024-07-26,611,0,14.0,SUB,Overheat detected,2024,7,30
+ACF004,72,Fuel Pump,2024-01-31,2096,0,23.7,SUB,Pressure leak,2024,1,5
+ACF009,23,Navigation Receiver,2024-05-05,857,0,2.1,CGK,Bearing worn out,2024,5,18
+ACF003,23,Navigation Receiver,2024-02-04,954,1,8.4,SUB,Electrical failure,2024,2,5
+ACF006,72,Engine Starter,2024-06-24,2866,1,21.5,DPS,Pressure leak,2024,6,26
+ACF009,23,Navigation Receiver,2024-10-17,2831,1,22.0,CGK,Sensor fault,2024,10,42
+ACF006,72,Engine Starter,2024-06-16,245,1,8.6,SUB,Overheat detected,2024,6,24
+ACF006,72,Fuel Pump,2024-01-04,1307,0,4.6,SUB,Pressure leak,2024,1,1
+ACF009,72,Ignition System,2024-11-17,1819,1,3.5,CGK,Bearing worn out,2024,11,46
+ACF001,72,Fuel Pump,2024-01-18,232,0,21.8,CGK,Overheat detected,2024,1,3
+ACF002,72,Ignition System,2024-10-14,1078,0,12.3,DPS,Sensor fault,2024,10,42
+ACF003,72,Fuel Pump,2024-04-05,1639,1,10.1,CGK,Overheat detected,2024,4,14
+ACF007,32,Wheel Actuator,2024-08-02,2656,0,5.5,CGK,Bearing worn out,2024,8,31
+ACF005,72,Ignition System,2024-05-06,1251,0,7.8,CGK,Sensor fault,2024,5,19
+ACF010,32,Shock Strut,2024-03-17,2464,0,21.1,DPS,Electrical failure,2024,3,11
+ACF004,23,Radio Altimeter,2024-05-09,811,1,8.1,DPS,Electrical failure,2024,5,19
+ACF003,23,Flight Computer,2024-08-11,203,1,23.9,DPS,Pressure leak,2024,8,32
+ACF003,23,Navigation Receiver,2024-11-02,2812,1,19.4,SUB,Overheat detected,2024,11,44
+ACF001,32,Brake Assembly,2024-12-12,1553,1,17.8,SUB,Bearing worn out,2024,12,50
+ACF001,72,Engine Starter,2024-01-17,540,0,23.8,DPS,Overheat detected,2024,1,3
+ACF008,23,Radio Altimeter,2024-03-24,1859,0,4.6,DPS,Electrical failure,2024,3,12
+ACF001,23,Navigation Receiver,2024-10-31,403,0,17.1,SUB,Electrical failure,2024,10,44
+ACF001,32,Brake Assembly,2024-02-05,2637,1,9.0,SUB,Bearing worn out,2024,2,6
+ACF004,32,Wheel Actuator,2024-09-13,1334,1,13.7,DPS,Pressure leak,2024,9,37
+ACF010,72,Engine Starter,2024-08-04,1135,1,12.0,DPS,Pressure leak,2024,8,31
+ACF008,32,Brake Assembly,2024-03-15,2207,0,8.8,CGK,Electrical failure,2024,3,11
+ACF007,32,Brake Assembly,2024-07-16,1145,1,11.8,DPS,Bearing worn out,2024,7,29
+ACF003,72,Engine Starter,2024-02-18,2359,1,11.4,CGK,Bearing worn out,2024,2,7
+ACF010,72,Ignition System,2024-04-28,2475,0,23.4,DPS,Electrical failure,2024,4,17
+ACF008,72,Engine Starter,2024-09-29,1675,0,6.5,DPS,Electrical failure,2024,9,39
+ACF004,23,Flight Computer,2024-07-09,1533,0,8.7,SUB,Pressure leak,2024,7,28
+ACF010,32,Shock Strut,2024-05-12,2054,1,8.3,SUB,Sensor fault,2024,5,19
+ACF007,23,Radio Altimeter,2024-09-05,1806,0,23.0,SUB,Overheat detected,2024,9,36
+ACF001,32,Brake Assembly,2024-11-08,340,0,19.6,SUB,Electrical failure,2024,11,45
+ACF008,23,Radio Altimeter,2024-06-30,1032,0,14.1,DPS,Sensor fault,2024,6,26
+ACF010,23,Navigation Receiver,2024-02-28,263,0,20.6,DPS,Overheat detected,2024,2,9
+ACF010,72,Engine Starter,2024-03-11,1770,0,15.3,CGK,Overheat detected,2024,3,11
+ACF003,32,Shock Strut,2024-05-06,1528,1,10.9,CGK,Overheat detected,2024,5,19
+ACF010,72,Fuel Pump,2024-01-13,2792,1,4.3,DPS,Sensor fault,2024,1,2
+ACF005,32,Shock Strut,2024-11-13,810,0,10.1,CGK,Overheat detected,2024,11,46
+ACF006,32,Shock Strut,2024-10-30,1303,0,20.7,CGK,Overheat detected,2024,10,44
+ACF008,23,Radio Altimeter,2024-02-22,387,0,4.7,CGK,Sensor fault,2024,2,8
+ACF006,23,Radio Altimeter,2024-06-30,510,1,23.5,CGK,Bearing worn out,2024,6,26
+ACF004,72,Fuel Pump,2024-06-02,2333,1,13.2,CGK,Electrical failure,2024,6,22
+ACF010,23,Flight Computer,2024-12-15,2123,1,10.0,DPS,Bearing worn out,2024,12,50
+ACF003,32,Brake Assembly,2024-04-11,929,1,23.5,DPS,Pressure leak,2024,4,15
+ACF008,32,Shock Strut,2024-09-08,1176,1,10.3,SUB,Overheat detected,2024,9,36
+ACF003,72,Ignition System,2024-02-25,2425,0,12.2,SUB,Electrical failure,2024,2,8
+ACF002,23,Radio Altimeter,2024-09-27,1646,0,13.4,SUB,Sensor fault,2024,9,39
+ACF008,72,Ignition System,2024-07-06,1234,1,4.4,DPS,Sensor fault,2024,7,27
+ACF008,32,Shock Strut,2024-08-08,1428,1,3.8,SUB,Bearing worn out,2024,8,32
+ACF007,23,Radio Altimeter,2024-01-14,737,1,16.3,CGK,Sensor fault,2024,1,2
+ACF008,23,Navigation Receiver,2024-08-01,151,0,15.6,DPS,Overheat detected,2024,8,31
+ACF009,23,Flight Computer,2024-03-13,1232,0,15.8,SUB,Bearing worn out,2024,3,11
+ACF003,72,Engine Starter,2024-12-07,821,0,9.9,SUB,Sensor fault,2024,12,49
+ACF008,32,Wheel Actuator,2024-05-03,1267,0,23.8,SUB,Pressure leak,2024,5,18
+ACF003,32,Wheel Actuator,2024-07-19,2685,0,21.1,DPS,Sensor fault,2024,7,29
+ACF001,32,Wheel Actuator,2024-07-04,1453,0,9.6,SUB,Sensor fault,2024,7,27
+ACF009,32,Brake Assembly,2024-04-25,1255,1,12.2,SUB,Bearing worn out,2024,4,17
+ACF007,23,Navigation Receiver,2024-05-19,1955,0,6.5,SUB,Bearing worn out,2024,5,20
+ACF008,72,Engine Starter,2024-04-15,2686,1,20.2,SUB,Bearing worn out,2024,4,16
+ACF005,72,Ignition System,2024-04-12,2543,1,11.3,CGK,Sensor fault,2024,4,15
+ACF005,32,Shock Strut,2024-07-16,365,1,10.7,DPS,Sensor fault,2024,7,29
+ACF006,72,Fuel Pump,2024-06-11,416,1,10.5,DPS,Overheat detected,2024,6,24
+ACF006,32,Shock Strut,2024-07-27,1913,1,3.8,DPS,Electrical failure,2024,7,30
+ACF003,72,Engine Starter,2024-12-29,1774,0,21.9,DPS,Sensor fault,2024,12,52
+ACF009,23,Radio Altimeter,2024-03-09,735,1,4.0,SUB,Overheat detected,2024,3,10
+ACF006,72,Ignition System,2024-09-01,1997,1,7.2,DPS,Bearing worn out,2024,9,35
+ACF005,23,Navigation Receiver,2024-12-29,1680,0,12.6,CGK,Sensor fault,2024,12,52
+ACF006,32,Shock Strut,2024-04-11,1114,0,15.2,SUB,Pressure leak,2024,4,15
+ACF001,23,Flight Computer,2024-01-10,642,0,11.1,CGK,Sensor fault,2024,1,2
+ACF009,72,Fuel Pump,2024-09-09,1916,1,20.6,DPS,Pressure leak,2024,9,37
+ACF002,32,Wheel Actuator,2024-08-02,1199,0,5.0,SUB,Sensor fault,2024,8,31
+ACF002,32,Wheel Actuator,2024-12-07,2568,1,9.5,DPS,Bearing worn out,2024,12,49
+ACF008,72,Engine Starter,2024-05-26,1977,1,18.8,SUB,Sensor fault,2024,5,21
+ACF008,32,Shock Strut,2024-10-09,545,1,6.2,SUB,Bearing worn out,2024,10,41
+ACF007,23,Radio Altimeter,2024-06-19,401,0,5.4,DPS,Pressure leak,2024,6,25
+ACF008,32,Wheel Actuator,2024-12-25,2174,1,7.7,DPS,Overheat detected,2024,12,52
+ACF007,32,Wheel Actuator,2024-06-29,267,1,15.6,DPS,Sensor fault,2024,6,26
+ACF009,32,Shock Strut,2024-08-23,2839,0,11.6,DPS,Pressure leak,2024,8,34
+ACF007,32,Wheel Actuator,2024-02-15,107,1,16.1,SUB,Overheat detected,2024,2,7
+ACF006,72,Ignition System,2024-12-30,2745,1,21.7,DPS,Electrical failure,2024,12,1
+ACF002,32,Brake Assembly,2024-06-26,350,1,21.8,CGK,Electrical failure,2024,6,26
+ACF004,32,Brake Assembly,2024-10-17,1469,1,23.4,DPS,Sensor fault,2024,10,42
+ACF007,32,Shock Strut,2024-06-01,305,0,7.5,CGK,Overheat detected,2024,6,22
+ACF010,72,Engine Starter,2024-04-01,2410,1,10.7,CGK,Pressure leak,2024,4,14
+ACF002,23,Navigation Receiver,2024-03-06,1874,1,15.2,DPS,Electrical failure,2024,3,10
+ACF001,72,Fuel Pump,2024-01-22,252,0,11.0,CGK,Electrical failure,2024,1,4
+ACF001,32,Shock Strut,2024-05-24,2431,0,5.3,SUB,Pressure leak,2024,5,21
