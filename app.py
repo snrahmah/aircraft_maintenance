@@ -84,7 +84,7 @@ st.subheader("Reliability Trend per Component")
 components = st.multiselect("Select Components", df['component_name'].unique(), default=df['component_name'].unique()[:3])
 for comp in components:
     trend = df[df['component_name']==comp].groupby('month')['unscheduled_removal'].sum()
-    st.line_chart(trend, height=250, width=250)
+    st.line_chart(trend, height=250, use_container_width=True)
 
 # 7. Age vs Failures Scatter
 st.subheader("Age vs Failures")
