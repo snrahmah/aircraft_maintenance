@@ -37,16 +37,19 @@ col5.metric("Worst Component (Lowest MTBUR)", worst_component)
 # ==========================
 st.header("Charts Section")
 
-# 1. Failure Trend per Month
-df['month'] = pd.to_datetime(df['failure_date']).dt.to_period('M')
-monthly_failure = df.groupby('month')['unscheduled_removal'].sum()
-st.subheader("Failure Trend per Month")
-st.bar_chart(monthly_failure)
+col1, col2 = st.columns(2)
+with col1:
+    # 1. Failure Trend per Month
+    df['month'] = pd.to_datetime(df['failure_date']).dt.to_period('M')
+    monthly_failure = df.groupby('month')['unscheduled_removal'].sum()
+    st.subheader("Failure Trend per Month")
+    st.bar_chart(monthly_failure, height=250, use_container_width=True)
 
-# 2. Failure Count per ATA Chapter
-failure_per_ata = df.groupby('ata_chapter')['unscheduled_removal'].sum()
-st.subheader("Failure Count per ATA Chapter")
-st.bar_chart(failure_per_ata)
+with col2:
+    # 2. Failure Count per ATA Chapter
+    failure_per_ata = df.groupby('ata_chapter')['unscheduled_removal'].sum()
+    st.subheader("Failure Count per ATA Chapter")
+    st.bar_chart(failure_per_ata, height=250, use_container_width=True)
 
 # 3. Avg Downtime per Component
 avg_downtime = df.groupby('component_name')['downtime_hours'].mean()
