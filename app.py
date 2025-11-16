@@ -41,15 +41,18 @@ col1, col2 = st.columns(2)
 with col1:
     # 1. Failure Trend per Month
     df['month'] = pd.to_datetime(df['failure_date']).dt.strftime('%b')
+    # order the month
+    month_order = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct','Nov','Dec']
+    df['month'] = pd.Categorical(df['month'], categories=month_order, ordered=True)
     monthly_failure = df.groupby('month')['unscheduled_removal'].sum()
     st.subheader("Failure Trend per Month")
-    st.bar_chart(monthly_failure, height=250, use_container_width=True)
+    st.bar_chart(monthly_failure, use_container_width=True)
 
 with col2:
     # 2. Failure Count per ATA Chapter
     failure_per_ata = df.groupby('ata_chapter')['unscheduled_removal'].sum()
     st.subheader("Failure Count per ATA Chapter")
-    st.bar_chart(failure_per_ata, height=250, use_container_width=True)
+    st.bar_chart(failure_per_ata, use_container_width=True)
 
 # 3. Avg Downtime per Component
 avg_downtime = df.groupby('component_name')['downtime_hours'].mean()
