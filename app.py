@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 st.set_page_config(layout="wide")
-st.title("Aircraft Maintenance Dashboard")
+st.title("Aircraft Maintenance Dashboard 2024")
 
 # ==========================
 # Load Dataset
@@ -65,12 +65,18 @@ st.bar_chart(mtbur)
 
 # 5. Pareto Chart – Unscheduled Removal per Component
 st.subheader("Pareto Chart – Unscheduled Removal per Component")
-sorted_ur = df['component_name'].value_counts().sort_values(ascending=False)
-cumsum = sorted_ur.cumsum() / sorted_ur.sum()
-fig, ax = plt.subplots(figsize=(10,5))
-ax.bar(sorted_ur.index, sorted_ur.values)
+
+# Pareto
+pareto = df_maintenance.groupby('component_name')['unscheduled_removal'].sum().sort_values(ascending=False)
+pareto.head(10)
+# cumulative percentage
+cumulative_percent = pareto.cumsum()/pareto.sum()*100
+cumulative_percent
+
+fig, ax = plt.subplots(figsize=(8,4))
+ax.bar(pareto.index, pareto.values)
 ax2 = ax.twinx()
-ax2.plot(sorted_ur.index, cumsum, color='red', marker='o', ms=5)
+ax2.plot(pareto.index, cumulative_percent, color='red', marker='o', ms=5)
 ax2.set_ylabel("Cumulative %")
 plt.xticks(rotation=45)
 st.pyplot(fig)
@@ -80,7 +86,7 @@ st.subheader("Reliability Trend per Component")
 components = st.multiselect("Select Components", df['component_name'].unique(), default=df['component_name'].unique()[:3])
 for comp in components:
     trend = df[df['component_name']==comp].groupby('month')['unscheduled_removal'].sum()
-    st.line_chart(trend, height=250, use_container_width=True)
+    st.line_chart(trend, height=250, width=250)
 
 # 7. Age vs Failures Scatter
 st.subheader("Age vs Failures")
@@ -130,3 +136,9 @@ st.pyplot(fig)
 # Trend per month
 monthly_trend = comp_data.groupby('month')['unscheduled_removal'].sum()
 st.line_chart(monthly_trend)
+
+st.markdown("""
+---
+**Note:** This dataset is **synthetic** and is for **learning and demonstration purpose only**.
+It does **not represent real aircrat maintenance data**.
+""")
