@@ -38,7 +38,7 @@ col5.metric("Worst Component (Lowest MTBUR)", worst_component)
 st.header("Charts Section")
 
 # 1. Failure Trend per Month
-df['month'] = pd.to_datetime(df['date']).dt.to_period('M')
+df['month'] = pd.to_datetime(df['failure_date']).dt.to_period('M')
 monthly_failure = df.groupby('month')['unscheduled_removal'].sum()
 st.subheader("Failure Trend per Month")
 st.bar_chart(monthly_failure)
