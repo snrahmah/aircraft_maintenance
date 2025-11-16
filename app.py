@@ -68,10 +68,8 @@ st.subheader("Pareto Chart – Unscheduled Removal per Component")
 
 # Pareto
 pareto = df.groupby('component_name')['unscheduled_removal'].sum().sort_values(ascending=False)
-pareto.head(10)
 # cumulative percentage
 cumulative_percent = pareto.cumsum()/pareto.sum()*100
-cumulative_percent
 
 fig, ax = plt.subplots(figsize=(8,4))
 ax.bar(pareto.index, pareto.values)
