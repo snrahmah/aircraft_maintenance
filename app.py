@@ -93,14 +93,14 @@ for comp in components:
 st.subheader("Age Distribution: Removed vs Not Removed")
 fig = px.box(
     df,
-    x="unscheduled_removal",
-    y="hours_since_install",
-    color="unscheduled_removal",
+    x='unscheduled_removal',
+    y='hours_since_install',
+    color='unscheduled_removal',
     labels={
         "unscheduled_removal": "",
         "hours_since_install": "Hours Since Install"
     },
-    category_orders = {"unscheduled_removal":[0, 1]},
+    category_orders = {'unscheduled_removal':[0, 1]},
 )
 
 # change name for 0 and 1 to not removed and removed
@@ -109,7 +109,6 @@ fig.updates_xaxes(
     ticktext = ["Not Removed", "Removed"]
 )
 st.plotly_chart(fig, use_container_width=True)
-
 
 # 8. Life Distribution Histogram
 st.subheader("Life Distribution of Components")
