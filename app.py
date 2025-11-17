@@ -104,7 +104,7 @@ fig = px.box(
 )
 
 # change name for 0 and 1 to not removed and removed
-fig.updates_xaxes(
+fig.update_xaxes(
     tickvals=[0, 1],
     ticktext = ["Not Removed", "Removed"]
 )
