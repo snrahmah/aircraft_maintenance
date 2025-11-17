@@ -129,7 +129,7 @@ for comp in components:
     st.line_chart(trend, height=250, use_container_width=True)
 
 # 7. Age vs Removal
-st.subheader("Age Distribution: Removed vs Not Removed")
+st.subheader("Age: Removed vs Not Removed")
 fig = px.box(
     df,
     x='unscheduled_removal',
