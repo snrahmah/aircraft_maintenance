@@ -82,7 +82,8 @@ fig.add_trace(
         x = pareto.index,
         y = pareto.values,
         name="Unschedule Removal",
-        marker_color="lightblue"
+        marker_color="lightblue",
+        yaxis = "y1"
     )
 )
 
@@ -92,26 +93,29 @@ fig.add_trace(
         x = pareto.index,
         y = cumulative_percent,
         name = "Cumulative %",
-        mode="lines+markers"
+        mode="lines+markers",
+        yaxis="y2"
+        line = dict(width=2)
     )
 )
 
 # layout
 fig.update_layout(
-    title= "Pareto Chart - Unscheduled Removal per Component",
-    xaxis_title="Component",
-    yaxis_title="Unschedule Count",
+    xaxis = dict(title = "Component", tickangle = 45),
+    
+    yaxis = dict(
+    title = "Failure Count",
+    side = "left"
+    ),
+    
     yaxis2 = dict(
-        overlaying="y",
-        side="right",
-        range=[0, 110],
-        title="Cumulative %",
+    title = "Cumulative %",
+    overlaying = "y",
+    side = "right",
+    range = [0,110]
     ),
     height=500
 )
-
-# Rotate x labels
-fig.update_layout(xaxis=dict(tickangle=45))
 
 st.plotly_chart(fig, use_container_width=True)
 
