@@ -3,6 +3,9 @@ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
+import plotly.express as px
+import plotly.graph_objects as go
+from plotly.subplots import make_subplots
 
 st.set_page_config(layout="wide")
 st.title("Aircraft Maintenance Dashboard 2024")
@@ -86,13 +89,27 @@ for comp in components:
     trend = df[df['component_name']==comp].groupby('month')['unscheduled_removal'].sum()
     st.line_chart(trend, height=250, use_container_width=True)
 
-# 7. Age vs Failures Scatter
+# 7. Age vs Removal
 st.subheader("Age Distribution: Removed vs Not Removed")
-fig, ax = plt.subplots(figsize=(6,4))
-ax.boxplot(df['unscheduled_removal'], df['hours_since_install'], ax=ax, palete="pastel")
-ax.set_ylabel("Hours Since Install")
-ax.set_xlabel("")
-st.pyplot(fig)
+fig = px.box(
+    df,
+    x="unscheduled_removal",
+    y="hours_since_install",
+    color="unscheduled_removal",
+    labels={
+        "unscheduled_removal": "",
+        "hours_since_install": "Hours Since Install"
+    },
+    category_orders = {"unscheduled_removal":[0, 1]},
+)
+
+# change name for 0 and 1 to not removed and removed
+fig.updates_xaxes(
+    tickvals=[0, 1],
+    ticktext = ["Not Removed", "Removed"]
+)
+st.plotly_chart(fig, use_container_width=True)
+
 
 # 8. Life Distribution Histogram
 st.subheader("Life Distribution of Components")
