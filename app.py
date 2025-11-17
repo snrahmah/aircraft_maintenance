@@ -66,8 +66,6 @@ st.bar_chart(avg_downtime)
 st.subheader("MTBUR per Component")
 st.bar_chart(mtbur)
 
-
-
 # 5. Pareto Chart – Unscheduled Removal per Component
 st.subheader("Pareto Chart – Unscheduled Removal per Component")
 
@@ -84,7 +82,7 @@ fig.add_trace(
         x = pareto.index,
         y = pareto.values,
         name="Unschedule Removal",
-        marker_color="lightskyblue",
+        marker_color="blue",
         yaxis = "y1"
     )
 )
