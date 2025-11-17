@@ -84,7 +84,7 @@ fig.add_trace(
         x = pareto.index,
         y = pareto.values,
         name="Unschedule Removal",
-        marker_color="lightblue",
+        marker_color="lightskyblue",
         yaxis = "y1"
     )
 )
@@ -120,9 +120,6 @@ fig.update_layout(
 )
 
 st.plotly_chart(fig, use_container_width=True)
-
-
-
 
 
 
