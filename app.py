@@ -66,6 +66,8 @@ st.bar_chart(avg_downtime)
 st.subheader("MTBUR per Component")
 st.bar_chart(mtbur)
 
+
+
 # 5. Pareto Chart – Unscheduled Removal per Component
 st.subheader("Pareto Chart – Unscheduled Removal per Component")
 
@@ -94,7 +96,7 @@ fig.add_trace(
         y = cumulative_percent,
         name = "Cumulative %",
         mode="lines+markers",
-        yaxis="y2"
+        yaxis="y2",
         line = dict(width=2)
     )
 )
@@ -118,6 +120,11 @@ fig.update_layout(
 )
 
 st.plotly_chart(fig, use_container_width=True)
+
+
+
+
+
 
 # 6. Reliability Trend per Component
 st.subheader("Reliability Trend per Component")
