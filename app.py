@@ -49,7 +49,14 @@ with col1:
     df['month'] = pd.Categorical(df['month'], categories=month_order, ordered=True)
     monthly_failure = df.groupby('month')['unscheduled_removal'].sum()
     st.subheader("Failure Trend per Month")
-    st.bar_chart(monthly_failure, use_container_width=True)
+    fig1 = px.bar(
+        monthly_failure,
+        x="month",
+        y="unscheduled_removal",
+        title="",
+        labels={"unscheduled_removal": "Failure Count", "month": "Month"}
+    )
+    st.plotly_chart(fig1, use_container_width=True)
 
 with col2:
     # 2. Failure Count per ATA Chapter
@@ -117,7 +124,6 @@ fig.update_layout(
 )
 
 st.plotly_chart(fig, use_container_width=True)
-
 
 
 # 6. Reliability Trend per Component
