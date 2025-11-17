@@ -78,7 +78,7 @@ fig = go.Figure()
 
 # bar chart
 fig.add_trace(
-    go.bar(
+    go.Bar(
         x = pareto.index,
         y = pareto.values,
         name="Unschedule Removal",
