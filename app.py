@@ -87,11 +87,12 @@ for comp in components:
     st.line_chart(trend, height=250, use_container_width=True)
 
 # 7. Age vs Failures Scatter
-st.subheader("Age vs Failures")
-fig, ax = plt.subplots()
-ax.scatter(df['hours_since_install'], df['unscheduled_removal'])
-ax.set_xlabel("Hours Since Install")
-ax.set_ylabel("Unscheduled Removal")
+st.subheader("Age Distribution: Removed vs Not Removed")
+fig, ax = plt.subplot(figsize=(6,4))
+sns.boxplot(x='unscheduled_removal', y='hours_since_install', data=df, ax=ax1, pallete="pastel")
+ax.set_xticklabel(["Not Removed", "Removed"])
+ax.set_ylabel("Hours Since Install")
+ax.set_xlabel("")
 st.pyplot(fig)
 
 # 8. Life Distribution Histogram
