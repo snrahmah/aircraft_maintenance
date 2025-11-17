@@ -74,13 +74,46 @@ pareto = df.groupby('component_name')['unscheduled_removal'].sum().sort_values(a
 # cumulative percentage
 cumulative_percent = pareto.cumsum()/pareto.sum()*100
 
-fig, ax = plt.subplots(figsize=(8,4))
-ax.bar(pareto.index, pareto.values)
-ax2 = ax.twinx()
-ax2.plot(pareto.index, cumulative_percent, color='red', marker='o', ms=5)
-ax2.set_ylabel("Cumulative %")
-plt.xticks(rotation=45)
-st.pyplot(fig)
+fig = go.Figure()
+
+# bar chart
+fig.add_trace(
+    go.bar(
+        x = pareto.index,
+        y = pareto.values,
+        name="Unschedule Removal",
+        marker_color="lightblue"
+    )
+)
+
+# line chart for cumulative (%)
+fig.add_trace(
+    go.Scatter(
+        x = pareto.index,
+        y = cumulative_percent,
+        name = "Cumulative %",
+        mode="lines+markers"
+    )
+)
+
+# layout
+fig.update_layout(
+    title= "Pareto Chart - Unscheduled Removal per Component",
+    xaxis_title="Component",
+    yaxis_title="Unschedule Count",
+    yaxis2 = dict(
+        overlaying="y",
+        side="right",
+        range=[0, 110],
+        title="Cumulative %",
+    ),
+    height=500
+)
+
+# Rotate x labels
+fig.update_layout(xaxis=dict(tickangle=45))
+
+st.plotly_chart(fig, use_container_width=True)
 
 # 6. Reliability Trend per Component
 st.subheader("Reliability Trend per Component")
