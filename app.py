@@ -47,8 +47,10 @@ with col1:
     # order the month
     month_order = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct','Nov','Dec']
     df['month'] = pd.Categorical(df['month'], categories=month_order, ordered=True)
-    monthly_failure = df.groupby('month')['unscheduled_removal'].sum()
+    monthly_failure = df.groupby('month')['unscheduled_removal'].sum().reset_index()
+   
     st.subheader("Failure Trend per Month")
+    
     fig1 = px.bar(
         monthly_failure,
         x="month",
