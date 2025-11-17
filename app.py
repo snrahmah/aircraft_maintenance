@@ -89,8 +89,7 @@ for comp in components:
 # 7. Age vs Failures Scatter
 st.subheader("Age Distribution: Removed vs Not Removed")
 fig, ax = plt.subplots(figsize=(6,4))
-sns.boxplot(x='unscheduled_removal', y='hours_since_install', data=df, ax=ax, palete="pastel")
-ax.set_xticklabels(["Not Removed", "Removed"])
+ax.boxplot(df['unscheduled_removal'], df['hours_since_install'], ax=ax, palete="pastel")
 ax.set_ylabel("Hours Since Install")
 ax.set_xlabel("")
 st.pyplot(fig)
