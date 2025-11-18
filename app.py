@@ -6,6 +6,7 @@ import seaborn as sns
 import plotly.express as px
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
+import altair as alt
 
 st.set_page_config(layout="wide")
 st.title("Aircraft Maintenance Dashboard 2024")
@@ -64,7 +65,9 @@ with col2:
     # 2. Failure Count per ATA Chapter
     df['ata_chapter'] = df['ata_chapter'].astype(str)
     failure_per_ata = df.groupby('ata_chapter')['unscheduled_removal'].sum()
-    st.bar_chart(failure_per_ata)
+
+    chart = alt.Chart(failure_per_ata).mark_bar(color="navy").encode(x="ata_chapter", y="unscheduled_removal")
+    st.altair_chart(chart, use_container_width=True)
 
 # 3. Avg Downtime per Component
 avg_downtime = df.groupby('component_name')['downtime_hours'].mean()
