@@ -62,8 +62,9 @@ with col1:
 
 with col2:
     # 2. Failure Count per ATA Chapter
+    df['ata_chapter'] = pd.Categorical(df['ata_chapter'], categories=sorted(df['ata_chapter']), ordered=True)
     failure_per_ata = df.groupby('ata_chapter')['unscheduled_removal'].sum().reset_index()
-    failure_per_ata['ata_chapter'] = failure_per_ata['ata_chapter'].astype(str)
+    
     st.subheader("Unschedulued Removal per ATA Chapter")
 
     fig2 = px.bar(
@@ -71,6 +72,7 @@ with col2:
         x = "ata_chapter",
         y = "unscheduled_removal",
         labels = {"unscheduled_removal": "Unscheduled Removal Count", "ata_chapter" : "ATA"},
+        color_discrete_sequence=["navy"]
     )
     st.plotly_chart(fig2, use_container_width=True)
 
