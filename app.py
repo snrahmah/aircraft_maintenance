@@ -49,24 +49,30 @@ with col1:
     df['month'] = pd.Categorical(df['month'], categories=month_order, ordered=True)
     monthly_failure = df.groupby('month')['unscheduled_removal'].sum().reset_index()
    
-    st.subheader("Failure Trend per Month")
+    st.subheader("Unschedulued Removal per Month")
     
     fig1 = px.bar(
         monthly_failure,
         x="month",
         y="unscheduled_removal",
-        title="",
-        labels={"unscheduled_removal": "Failure Count", "month": "Month"},
+        labels={"unscheduled_removal": "Unscheduled Removal Count", "month": "Month"},
         color_discrete_sequence=["navy"]
-
     )
     st.plotly_chart(fig1, use_container_width=True)
 
 with col2:
     # 2. Failure Count per ATA Chapter
-    failure_per_ata = df.groupby('ata_chapter')['unscheduled_removal'].sum()
-    st.subheader("Failure Count per ATA Chapter")
-    st.bar_chart(failure_per_ata, use_container_width=True)
+    failure_per_ata = df.groupby('ata_chapter')['unscheduled_removal'].sum().reset_index()
+    st.subheader("Unschedulued Removal per ATA Chapter")
+
+    fig2. = px.bar(
+        failure_per_ata,
+        x = "ata_chapter",
+        y = "unscheduled_removal",
+        label = {"unscheduled_removal": "Unscheduled Removal Count", "ata_chapter" = "ATA"},
+        color_discrete_sequence = ["navy"]
+    )
+    st.plotly_chart(fig2, use_container_width=True)
 
 # 3. Avg Downtime per Component
 avg_downtime = df.groupby('component_name')['downtime_hours'].mean()
