@@ -70,7 +70,7 @@ with col2:
     fig2 = go.Figure()
 
     fig2.add_trace(
-        go.bar(
+        go.Bar(
             x = failure_per_ata['ata_chapter'],
             y = failure_per_ata['unscheduled_removal'],
             labels = {"unscheduled_removal": "Unscheduled Removal Count", "ata_chapter" : "ATA"},
