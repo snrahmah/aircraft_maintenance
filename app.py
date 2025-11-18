@@ -121,7 +121,7 @@ fig.add_trace(
         y = pareto.values,
         name="Unschedule Removal",
         yaxis = "y1",
-        marker_color = 'gold'
+        marker_color = "navy"
     )
 )
 
