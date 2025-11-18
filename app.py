@@ -99,7 +99,7 @@ fig = px.bar(
     mtbur,
     x = "component_name",
     y = "0",
-    labels = {"component_name": "Component", "0":"MTBUR"},
+    labels = {"component_name": "Component", "MTBUR":"MTBUR"},
     color_discrete_sequence = ["navy"]
 )
 st.plotly_chart(fig)
