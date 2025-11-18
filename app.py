@@ -42,7 +42,7 @@ st.header("Charts Section")
 
 col1, col2 = st.columns(2)
 with col1:
-    # 1. Failure Trend per Month
+    # 1. Unschedulued Removal per Month
     df['month'] = pd.to_datetime(df['failure_date']).dt.strftime('%b')
     # order the month
     month_order = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct','Nov','Dec']
@@ -57,7 +57,7 @@ with col1:
         y="unscheduled_removal",
         title="",
         labels={"unscheduled_removal": "Failure Count", "month": "Month"},
-        color_discrete_sequence=["YellowGreen"]
+        color_discrete_sequence=["navy"]
 
     )
     st.plotly_chart(fig1, use_container_width=True)
