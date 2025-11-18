@@ -175,7 +175,7 @@ for comp in components:
         )
     )
     fig.update_layout(
-        xaxis = dict(title = "Month", tickangle = 45),
+        xaxis = dict(title = "Month"),
         yaxis = dict(title = "Unscheduled Removal", side = "left"),
         height = 300
     )
