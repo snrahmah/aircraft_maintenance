@@ -62,8 +62,8 @@ with col1:
 
 with col2:
     # 2. Failure Count per ATA Chapter
-    df['ata_chapter'] = pd.Categorical(df['ata_chapter'], categories=sorted(df['ata_chapter']), ordered=True)
     failure_per_ata = df.groupby('ata_chapter')['unscheduled_removal'].sum().reset_index()
+    failure_per_ata['ata_chapter'] = pd.Categorical(failure_per_ata['ata_chapter'], categories=sorted(failure_per_ata['ata_chapter']), ordered=True)
     
     st.subheader("Unschedulued Removal per ATA Chapter")
 
