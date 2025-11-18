@@ -192,8 +192,6 @@ fig = px.box(
         "unscheduled_removal": "",
         "hours_since_install": "Hours Since Install"},
     category_orders = {'unscheduled_removal':[0, 1]},
-    marker_color = "rgb(107,174,214)",
-    line_color = "rgb(107,174,214)"
 )
 
 # change name for 0 and 1 to not removed and removed
