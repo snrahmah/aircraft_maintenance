@@ -62,6 +62,7 @@ with col1:
 
 with col2:
     # 2. Failure Count per ATA Chapter
+    df['ata_chapter'] = df['ata_chapter'].astype(str)
     failure_per_ata = df.groupby('ata_chapter')['unscheduled_removal'].sum().reset_index()
     st.subheader("Unschedulued Removal per ATA Chapter")
 
