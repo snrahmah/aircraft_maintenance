@@ -207,7 +207,7 @@ st.plotly_chart(fig, use_container_width=True)
 st.subheader("Life Distribution of Components")
 fig = px.histogram(
     df,
-    x = "hours_since_install,
+    x = "hours_since_install",
     nbins = 20,
     labels = {"hours_since_install": "Hours Since Install}   
 )
