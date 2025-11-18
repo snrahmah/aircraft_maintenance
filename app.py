@@ -216,7 +216,7 @@ fig = px.histogram(
     df,
     x = "hours_since_install",
     nbins = 20,
-    labels = {"hours_since_install": "Hours Since Install", "count":"Count"}   
+    labels = {"hours_since_install": "Hours Since Install", "y":"Count"}   
 )
 fig.update_traces(marker_color="navy", marker_line_width = 1, marker_line_color="white")
 fig.update_layout(
@@ -244,7 +244,7 @@ fig= px.histogram(
     comp_data,
     x = "hours_since_install", 
     nbins = 15,
-    labels = {"hours_since_install": "Hours Since Install", "count": "Count"}
+    labels = {"hours_since_install": "Hours Since Install", "y": "Count"}
 )
 fig.update_traces(marker_color="navy", marker_line_width=1, marker_line_color="white")
 fig.update_layout(
