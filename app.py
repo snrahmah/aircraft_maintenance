@@ -148,7 +148,7 @@ st.subheader("MTBUR per Component")
 fig = px.bar(
     x = mtbur.index,
     y = mtbur.values,
-    labels = {"component_name": "Component", "MTBUR":"MTBUR"},
+    labels = {"x": "Component", "y":"MTBUR"},
     color_discrete_sequence = ["navy"]
 )
 st.plotly_chart(fig)
@@ -216,7 +216,7 @@ fig = px.histogram(
     df,
     x = "hours_since_install",
     nbins = 20,
-    labels = {"hours_since_install": "Hours Since Install"}   
+    labels = {"hours_since_install": "Hours Since Install", "count":"Count"}   
 )
 fig.update_traces(marker_color="navy", marker_line_width = 1, marker_line_color="white")
 fig.update_layout(
@@ -234,24 +234,37 @@ st.plotly_chart(fig, use_container_width=True)
 st.header("Component Detail Explorer")
 selected_comp = st.selectbox("Select Component", df['component_name'].unique())
 comp_data = df[df['component_name']==selected_comp]
-st.write(f"**Total Failures:** {comp_data['unscheduled_removal'].sum()}")
+st.write(f"**Total Unscheduled Removal:** {comp_data['unscheduled_removal'].sum()}")
 st.write(f"**Total Downtime Hours:** {comp_data['downtime_hours'].sum()}")
 comp_mtbur = comp_data['hours_since_install'].sum() / max(comp_data['unscheduled_removal'].sum(),1)
 st.write(f"**MTBUR:** {comp_mtbur:.2f}")
 
 # Life Histogram per Component
-fig, ax = plt.subplots()
-ax.hist(comp_data['hours_since_install'], bins=15, color='lightgreen', edgecolor='black')
-ax.set_xlabel("Hours Since Install")
-ax.set_ylabel("Count")
-st.pyplot(fig)
+fig= px.histogram(
+    comp_data,
+    x = "hours_since_install", 
+    nbins = 15,
+    labels = {"hours_since_install": "Hours Since Install", "count": "Count"}
+)
+fig.update_traces(marker_color="navy", marker_line_width=1, marker_line_color="white")
+fig.update_layout(
+    xaxis = dict(showgrid= True),
+    yaxis = dict(showgrid= True),
+    bargap = 0.02
+)
+st.plotly_chart(fig, use_container_width=True)
 
 # Trend per month
 monthly_trend = comp_data.groupby('month')['unscheduled_removal'].sum()
-st.line_chart(monthly_trend)
+fig = px.line(
+    x = monthly_trend.index,
+    y = monthly_trend.values,
+    label ={"x":"Month", "y": "Unscheduled Removal Count"}
+)
+fig.update_traces(marker_color = "navy")
+st.plotly_chart(fig, use_container_width = True)
 
 st.markdown("""
----
 **Note:** This dataset is **synthetic** and is for **learning and demonstration purpose only**.
 It does **not represent real aircrat maintenance data**.
 """)
