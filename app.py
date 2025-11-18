@@ -135,7 +135,7 @@ fig.add_trace(
 
 # layout
 fig.update_layout(
-    xaxis = dict(title = "Component", tickangle = 45),
+    xaxis = dict(title = "Component"),
     
     yaxis = dict(
     title = "Failure Count",
