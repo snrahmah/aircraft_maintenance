@@ -182,17 +182,18 @@ for comp in components:
     st.plotly_chart(fig, use_container_width=True)
 
 # 7. Age vs Removal
-st.subheader("Age: Removed vs Not Removed")
+st.subheader("Age Distribution: Removed vs Not Removed")
 fig = px.box(
     df,
-    x='unscheduled_removal',
-    y='hours_since_install',
-    color='unscheduled_removal',
+    x="unscheduled_removal",
+    y="hours_since_install",
+    color="unscheduled_removal",
     labels={
         "unscheduled_removal": "",
-        "hours_since_install": "Hours Since Install"
-    },
+        "hours_since_install": "Hours Since Install"},
     category_orders = {'unscheduled_removal':[0, 1]},
+    color_discrete_map={
+        0:"navy", 1:"rgba(0, 0, 128, 0.4)"}
 )
 
 # change name for 0 and 1 to not removed and removed
