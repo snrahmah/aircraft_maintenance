@@ -30,8 +30,8 @@ mtbur = df.groupby('component_name').apply(
     lambda x: x['hours_since_install'].sum() / max(x['unscheduled_removal'].sum(), 1))
 
 # Best and worst component
-best_idx = mtbur[].idxmax()
-worst_idx = mtbur[].idxmin()
+best_idx = mtbur.idxmax()
+worst_idx = mtbur.idxmin()
 
 best_component = mtbur.loc[best_idx, 'component_name']
 worst_component = mtbur.loc[worst_idx, 'component_name']
