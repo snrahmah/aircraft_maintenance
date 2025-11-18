@@ -33,8 +33,6 @@ mtbur = df.groupby('component_name').apply(
 best_idx = mtbur.idxmax()
 worst_idx = mtbur.idxmin()
 
-best_component = mtbur.loc[best_idx, 'component_name']
-worst_component = mtbur.loc[worst_idx, 'component_name']
 
 col1, col2, col3, col4, col5 = st.columns(5)
 col1.metric("Total Failures (2024)", total_failures)
