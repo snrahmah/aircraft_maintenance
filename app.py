@@ -65,7 +65,7 @@ with col2:
     failure_per_ata = df.groupby('ata_chapter')['unscheduled_removal'].sum().reset_index()
     st.subheader("Unschedulued Removal per ATA Chapter")
 
-    fig2. = px.bar(
+    fig2 = px.bar(
         failure_per_ata,
         x = "ata_chapter",
         y = "unscheduled_removal",
