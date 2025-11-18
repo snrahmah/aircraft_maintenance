@@ -120,7 +120,7 @@ fig.add_trace(
         x = pareto.index,
         y = pareto.values,
         name="Unschedule Removal",
-        marker_color = "navy"
+        marker_color = "navy",
         yaxis = "y1"
     )
 )
@@ -132,7 +132,7 @@ fig.add_trace(
         y = cumulative_percent,
         name = "Cumulative %",
         mode="lines+markers",
-        marker_color = "gold"
+        marker_color = "gold",
         yaxis="y2",
         line = dict(width=2)
     )
