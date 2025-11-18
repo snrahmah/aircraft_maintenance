@@ -69,7 +69,7 @@ with col2:
         failure_per_ata,
         x = "ata_chapter",
         y = "unscheduled_removal",
-        label = {"unscheduled_removal": "Unscheduled Removal Count", "ata_chapter" = "ATA"},
+        label = {"unscheduled_removal": "Unscheduled Removal Count", "ata_chapter" : "ATA"},
         color_discrete_sequence = ["navy"]
     )
     st.plotly_chart(fig2, use_container_width=True)
