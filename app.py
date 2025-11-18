@@ -70,7 +70,7 @@ with col2:
     chart = alt.Chart(failure_per_ata).mark_bar(color="navy").encode(
         x=alt.X('ata_chapter:N', title = 'ATA', axis = alt.Axis(labelAngle=0)),
         y=alt.Y('unscheduled_removal:Q', title='Unscheduled Removal Count'))
-    st.altair_chart(chart, use_container_width=True)
+    st.altair_chart(chart)
 
 # 3. Avg Downtime per Component
 avg_downtime = df.groupby('component_name')['downtime_hours'].mean()
