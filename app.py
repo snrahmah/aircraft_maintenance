@@ -57,7 +57,8 @@ with col1:
         x="month",
         y="unscheduled_removal",
         labels={"unscheduled_removal": "Unscheduled Removal Count", "month": "Month"},
-        color_discrete_sequence=["navy"]
+        color_discrete_sequence=["navy"],
+        height=400 
     )
     st.plotly_chart(fig1, use_container_width=True)
 
@@ -69,7 +70,7 @@ with col2:
     st.subheader("Unschedulued Removal per ATA")
     chart = alt.Chart(failure_per_ata).mark_bar(color="navy").encode(
         x=alt.X('ata_chapter:N', title = 'ATA', axis = alt.Axis(labelAngle=0)),
-        y=alt.Y('unscheduled_removal:Q', title='Unscheduled Removal Count'))
+        y=alt.Y('unscheduled_removal:Q', title='Unscheduled Removal Count')).properties(height=400)
     st.altair_chart(chart)
 
 # 3. Avg Downtime per Component
