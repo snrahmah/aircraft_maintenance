@@ -205,11 +205,14 @@ st.plotly_chart(fig, use_container_width=True)
 
 # 8. Life Distribution Histogram
 st.subheader("Life Distribution of Components")
-fig, ax = plt.subplots()
-ax.hist(df['hours_since_install'], bins=20, color='navy', edgecolor='white')
-ax.set_xlabel("Hours Since Install")
-ax.set_ylabel("Count")
-st.pyplot(fig)
+fig = px.histogram(
+    df,
+    x = "hours_since_install,
+    nbins = 20,
+    labels = {"hours_since_install": "Hours Since Install}   
+)
+fig.update_traces(marker_color="navy")
+st.plotly_chart(fig, use_container_width=True)
 
 
 # 9. MTBUR vs MTTR Scatter
