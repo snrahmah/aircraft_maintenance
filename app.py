@@ -181,6 +181,7 @@ for comp in components:
     )
     st.plotly_chart(fig, use_container_width=True)
 
+
 # 7. Age vs Removal
 st.subheader("Age Distribution: Removed vs Not Removed")
 fig = px.box(
@@ -201,13 +202,15 @@ fig.update_xaxes(
 )
 st.plotly_chart(fig, use_container_width=True)
 
+
 # 8. Life Distribution Histogram
 st.subheader("Life Distribution of Components")
 fig, ax = plt.subplots()
-ax.hist(df['hours_since_install'], bins=20, color='skyblue', edgecolor='black')
+ax.hist(df['hours_since_install'], bins=20, color='navy', edgecolor='black')
 ax.set_xlabel("Hours Since Install")
 ax.set_ylabel("Count")
 st.pyplot(fig)
+
 
 # 9. MTBUR vs MTTR Scatter
 st.subheader("MTBUR vs MTTR")
