@@ -92,9 +92,8 @@ st.plotly_chart(fig, use_container_width = True)
 # 4. MTBUR per Component
 st.subheader("MTBUR per Component")
 fig = px.bar(
-    mtbur,
-    x = "component_name",
-    y = "MTBUR",
+    x = mtbur.index,
+    y = mtbur.values,
     labels = {"component_name": "Component", "MTBUR":"MTBUR"},
     color_discrete_sequence = ["navy"]
 )
