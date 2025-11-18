@@ -95,14 +95,14 @@ st.plotly_chart(fig, use_container_width = True)
 
 # 4. MTBUR per Component
 st.subheader("MTBUR per Component")
-fig = px.bar(
+fig2 = px.bar(
     mtbur,
     x = "component_name",
     y = "0",
     labels = {"component_name": "Component", "MTBUR":"MTBUR"},
     color_discrete_sequence = ["navy"]
 )
-st.plotly_chart(fig)
+st.plotly_chart(fig2)
 
 # 5. Pareto Chart – Unscheduled Removal per Component
 st.subheader("Pareto Chart – Unscheduled Removal per Component")
