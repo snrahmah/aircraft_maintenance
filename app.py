@@ -206,7 +206,7 @@ st.plotly_chart(fig, use_container_width=True)
 # 8. Life Distribution Histogram
 st.subheader("Life Distribution of Components")
 fig, ax = plt.subplots()
-ax.hist(df['hours_since_install'], bins=20, color='navy', edgecolor='black')
+ax.hist(df['hours_since_install'], bins=20, color='navy', edgecolor='white')
 ax.set_xlabel("Hours Since Install")
 ax.set_ylabel("Count")
 st.pyplot(fig)
