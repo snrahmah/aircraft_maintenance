@@ -163,8 +163,23 @@ st.plotly_chart(fig, use_container_width=True)
 st.subheader("Reliability Trend per Component")
 components = st.multiselect("Select Components", df['component_name'].unique(), default=df['component_name'].unique()[:1])
 for comp in components:
-    trend = df[df['component_name']==comp].groupby('month')['unscheduled_removal'].sum()
-    st.line_chart(trend, height=250, use_container_width=True)
+    trend = df[df["component_name"]==comp].groupby("month")["unscheduled_removal"].sum()
+    fig = go.Figure()
+    fig.add_trace(
+        go.Scatter(
+            x = trend["month"],
+            y = trend["unscheduled_removal"],
+            mode = "lines",
+            line = dict(widht=2),
+            marker_color = "navy"
+        )
+    )
+    fig.update_layout(
+        x_axis = dict(title = "Month", tickangle = 45),
+        y_axis = dict(title = "Unscheduled Removal", side = "left"),
+        height = 300
+    )
+    st.plotly_chart(fig, use_container_width=True)
 
 # 7. Age vs Removal
 st.subheader("Age: Removed vs Not Removed")
