@@ -132,9 +132,9 @@ fig.update_layout(
 
 st.plotly_chart(fig, use_container_width=True)
 
-# 3. Avg Downtime per Component
+# 3. Avg Downtime per Component (MTTR)
 avg_downtime = df.groupby('component_name')['downtime_hours'].mean()
-st.subheader("Average Downtime Hours per Component")
+st.subheader("Mean Time To Repair (MTTR)")
 fig = px.bar(
     x = avg_downtime.index,
     y = avg_downtime.values,
