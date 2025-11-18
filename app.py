@@ -76,7 +76,10 @@ with col2:
 # 3. Avg Downtime per Component
 avg_downtime = df.groupby('component_name')['downtime_hours'].mean()
 st.subheader("Average Downtime Hours per Component")
-st.bar_chart(avg_downtime)
+fig = px.bar(
+    
+)
+st.plot_chart(avg_downtime)
 
 # 4. MTBUR per Component
 st.subheader("MTBUR per Component")
