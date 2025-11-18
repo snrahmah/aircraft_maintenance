@@ -64,24 +64,6 @@ with col2:
     # 2. Failure Count per ATA Chapter
     df['ata_chapter'] = df['ata_chapter'].astype(str)
     failure_per_ata = df.groupby('ata_chapter')['unscheduled_removal'].sum().reset_index()
-    
-    st.subheader("Unschedulued Removal per ATA Chapter")
-
-    fig2 = go.Figure()
-
-    fig2.add_trace(
-        go.Bar(
-            x = failure_per_ata['ata_chapter'],
-            y = failure_per_ata['unscheduled_removal'],
-            marker_color = "navy"
-        )
-    )
-    fig2.update_layout(
-        xaxis_title="ATA",
-        yaxis_title = "Unscheduled Removal Count"
-    )
-    
-    st.plotly_chart(fig2, use_container_width=True)
 
 # 3. Avg Downtime per Component
 avg_downtime = df.groupby('component_name')['downtime_hours'].mean()
