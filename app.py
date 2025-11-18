@@ -26,8 +26,8 @@ total_downtime = df['downtime_hours'].sum()
 
 mtbur = df.groupby('component_name').apply(
     lambda x: x['hours_since_install'].sum() / max(x['unscheduled_removal'].sum(), 1)).reset_index()
-best_component = mtbur[].idxmax()
-worst_component = mtbur[].idxmin()
+best_component = mtbur['hours_since_install'].idxmax()
+worst_component = mtbur['hours_since_install'].idxmin()
 
 col1, col2, col3, col4, col5 = st.columns(5)
 col1.metric("Total Failures (2024)", total_failures)
