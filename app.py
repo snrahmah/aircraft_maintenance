@@ -259,7 +259,7 @@ monthly_trend = comp_data.groupby('month')['unscheduled_removal'].sum()
 fig = px.line(
     x = monthly_trend.index,
     y = monthly_trend.values,
-    labels ={"x":"Month", "y": "Unscheduled Removal Count"}
+    labels ={"x":"Month", "y": "Unscheduled Removal Count"},
     color_discrete_sequence=["navy"]
 )
 st.plotly_chart(fig, use_container_width = True)
