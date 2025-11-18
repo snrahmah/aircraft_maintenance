@@ -153,16 +153,30 @@ fig = px.bar(
 )
 st.plotly_chart(fig)
 
+
 # 9. MTBUR vs MTTR Scatter
 st.subheader("MTBUR vs MTTR")
-avg_downtime_per_comp = df.groupby('component_name')['downtime_hours'].mean()
-fig, ax = plt.subplots()
-ax.scatter(mtbur, avg_downtime_per_comp)
-for i, txt in enumerate(mtbur.index):
-    ax.annotate(txt, (mtbur[i], avg_downtime_per_comp[i]))
-ax.set_xlabel("MTBUR")
-ax.set_ylabel("Average Downtime (MTTR)")
-st.pyplot(fig)
+mttr = df.groupby('component_name')['downtime_hours'].mean()
+
+scatter_df = pd.DataFrame({
+    "component_name": mtbur.index,
+    "MTBUR": mtbur.values,
+    "MTTR": mttr.values
+})
+
+fig = px.scatter(
+    scatter_df,
+    x="MTBUR",
+    y="MTTR",
+    text="component_name",
+    labels={"MTBUR": "MTBUR", "MTTR": "Average Downtime (MTTR)"},
+    color_discrete_sequence=["navy"]
+)
+
+# component_name in scatter
+fig.update_traces(textposition='top center')
+
+st.plotly_chart(fig, use_container_width=True)
 
 
 
