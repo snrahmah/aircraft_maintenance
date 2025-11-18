@@ -78,27 +78,6 @@ with col2:
         y=alt.Y('unscheduled_removal:Q', title='Unscheduled Removal Count')).properties(height=400)
     st.altair_chart(chart)
 
-# 3. Avg Downtime per Component
-avg_downtime = df.groupby('component_name')['downtime_hours'].mean()
-st.subheader("Average Downtime Hours per Component")
-fig = px.bar(
-    x = avg_downtime.index,
-    y = avg_downtime.values,
-    labels = {"x":"Component", "y": "Downtime Hours"},
-    color_discrete_sequence = ["navy"]
-)
-st.plotly_chart(fig, use_container_width = True)
-
-# 4. MTBUR per Component
-st.subheader("MTBUR per Component")
-fig = px.bar(
-    x = mtbur.index,
-    y = mtbur.values,
-    labels = {"component_name": "Component", "MTBUR":"MTBUR"},
-    color_discrete_sequence = ["navy"]
-)
-st.plotly_chart(fig)
-
 # 5. Pareto Chart – Unscheduled Removal per Component
 st.subheader("Pareto Chart – Unscheduled Removal per Component")
 
@@ -152,6 +131,39 @@ fig.update_layout(
 )
 
 st.plotly_chart(fig, use_container_width=True)
+
+# 3. Avg Downtime per Component
+avg_downtime = df.groupby('component_name')['downtime_hours'].mean()
+st.subheader("Average Downtime Hours per Component")
+fig = px.bar(
+    x = avg_downtime.index,
+    y = avg_downtime.values,
+    labels = {"x":"Component", "y": "Downtime Hours"},
+    color_discrete_sequence = ["navy"]
+)
+st.plotly_chart(fig, use_container_width = True)
+
+# 4. MTBUR per Component
+st.subheader("MTBUR per Component")
+fig = px.bar(
+    x = mtbur.index,
+    y = mtbur.values,
+    labels = {"component_name": "Component", "MTBUR":"MTBUR"},
+    color_discrete_sequence = ["navy"]
+)
+st.plotly_chart(fig)
+
+# 9. MTBUR vs MTTR Scatter
+st.subheader("MTBUR vs MTTR")
+avg_downtime_per_comp = df.groupby('component_name')['downtime_hours'].mean()
+fig, ax = plt.subplots()
+ax.scatter(mtbur, avg_downtime_per_comp)
+for i, txt in enumerate(mtbur.index):
+    ax.annotate(txt, (mtbur[i], avg_downtime_per_comp[i]))
+ax.set_xlabel("MTBUR")
+ax.set_ylabel("Average Downtime (MTTR)")
+st.pyplot(fig)
+
 
 
 # 6. Reliability Trend per Component
@@ -214,17 +226,6 @@ fig.update_layout(
 )
 st.plotly_chart(fig, use_container_width=True)
 
-
-# 9. MTBUR vs MTTR Scatter
-st.subheader("MTBUR vs MTTR")
-avg_downtime_per_comp = df.groupby('component_name')['downtime_hours'].mean()
-fig, ax = plt.subplots()
-ax.scatter(mtbur, avg_downtime_per_comp)
-for i, txt in enumerate(mtbur.index):
-    ax.annotate(txt, (mtbur[i], avg_downtime_per_comp[i]))
-ax.set_xlabel("MTBUR")
-ax.set_ylabel("Average Downtime (MTTR)")
-st.pyplot(fig)
 
 
 # ==========================
