@@ -34,7 +34,7 @@ mtbur = mtbur.rename(columns={0: "MTBUR"})
 best_idx = mtbur['MTBUR'].idxmax()
 worst_idx = mtbur['MTBUR'].idxmin()
 
-best_component = mtbur.loc[best_idx, 'compoennt_name']
+best_component = mtbur.loc[best_idx, 'component_name']
 worst_component = mtbur.loc[worst_idx, 'component_name']
 
 col1, col2, col3, col4, col5 = st.columns(5)
