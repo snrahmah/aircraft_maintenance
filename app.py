@@ -43,7 +43,7 @@ st.header("Charts Section")
 
 col1, col2 = st.columns(2)
 with col1:
-    # 1. Unschedulued Removal per Month
+# 1. Unschedulued Removal per Month
     df['month'] = pd.to_datetime(df['failure_date']).dt.strftime('%b')
     # order the month
     month_order = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct','Nov','Dec']
@@ -63,7 +63,7 @@ with col1:
     st.plotly_chart(fig1, use_container_width=True)
 
 with col2:
-    # 2. Failure Count per ATA Chapter
+# 2. Failure Count per ATA Chapter
     df['ata_chapter'] = df['ata_chapter'].astype(str)
     failure_per_ata = df.groupby('ata_chapter')['unscheduled_removal'].sum().reset_index()
 
@@ -80,7 +80,7 @@ fig = px.bar(
     avg_downtime,
     x = "component_name",
     y = "downtime_hours",
-    labels = {"component_name":"Component", "downtime_hours": "Downtime Hours"}
+    labels = {"component_name":"Component", "downtime_hours": "Downtime Hours"},
     color_discrete_sequence = ["navy"]
 )
 st.plot_chart(avg_downtime)
