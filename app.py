@@ -83,7 +83,7 @@ fig = px.bar(
     labels = {"component_name":"Component", "downtime_hours": "Downtime Hours"},
     color_discrete_sequence = ["navy"]
 )
-st.plot_chart(avg_downtime)
+st.plotly_chart(fig, use_container_width = True)
 
 # 4. MTBUR per Component
 st.subheader("MTBUR per Component")
