@@ -25,9 +25,9 @@ total_components = df['component_name'].nunique()
 total_downtime = df['downtime_hours'].sum()
 
 mtbur = df.groupby('component_name').apply(
-    lambda x: x['hours_since_install'].sum() / max(x['unscheduled_removal'].sum(), 1))
-best_component = mtbur.idxmax()
-worst_component = mtbur.idxmin()
+    lambda x: x['hours_since_install'].sum() / max(x['unscheduled_removal'].sum(), 1)).reset_index()
+best_component = mtbur['0'].idxmax()
+worst_component = mtbur['0'].idxmin()
 
 col1, col2, col3, col4, col5 = st.columns(5)
 col1.metric("Total Failures (2024)", total_failures)
@@ -87,7 +87,14 @@ st.plotly_chart(fig, use_container_width = True)
 
 # 4. MTBUR per Component
 st.subheader("MTBUR per Component")
-st.bar_chart(mtbur)
+fig = px.bar(
+    mtbur,
+    x = "component_name",
+    y = "0",
+    labels = {"component_name": "Component", "0":"MTBUR"},
+    color_discrete_sequence = ["navy"]
+)
+st.plotly_chart(fig)
 
 # 5. Pareto Chart – Unscheduled Removal per Component
 st.subheader("Pareto Chart – Unscheduled Removal per Component")
