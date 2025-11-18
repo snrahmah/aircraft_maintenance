@@ -169,7 +169,7 @@ for comp in components:
         go.Scatter(
             trend,
             x = "month",
-            y = "unscheduled_removal,
+            y = "unscheduled_removal",
             mode = "lines",
             line = dict(widht=2),
             marker_color = "navy"
