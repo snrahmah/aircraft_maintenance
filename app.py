@@ -274,7 +274,8 @@ fig = px.line(
     x = monthly_trend.index,
     y = monthly_trend.values,
     labels ={"x":"Month", "y": "Unscheduled Removal Count"},
-    color_discrete_sequence=["navy"]
+    color_discrete_sequence=["navy"],
+    height = 300
 )
 st.plotly_chart(fig, use_container_width = True)
 
