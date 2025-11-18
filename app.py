@@ -74,10 +74,14 @@ with col2:
     st.altair_chart(chart)
 
 # 3. Avg Downtime per Component
-avg_downtime = df.groupby('component_name')['downtime_hours'].mean()
+avg_downtime = df.groupby('component_name')['downtime_hours'].mean().reset_index()
 st.subheader("Average Downtime Hours per Component")
 fig = px.bar(
-    
+    avg_downtime,
+    x = "component_name",
+    y = "downtime_hours",
+    labels = {"component_name":"Component", "downtime_hours": "Downtime Hours"}
+    color_discrete_sequence = ["navy"]
 )
 st.plot_chart(avg_downtime)
 
