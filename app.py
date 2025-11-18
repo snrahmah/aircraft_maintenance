@@ -20,15 +20,22 @@ df = pd.read_csv("maintenance_data.csv")
 # Summary KPIs
 # ==========================
 st.header("Summary KPIs")
+
 total_failures = df['unscheduled_removal'].sum()
 total_components = df['component_name'].nunique()
 total_downtime = df['downtime_hours'].sum()
 
+# MTBUR
 mtbur = df.groupby('component_name').apply(
     lambda x: x['hours_since_install'].sum() / max(x['unscheduled_removal'].sum(), 1)).reset_index()
 mtbur = mtbur.rename(columns={0: "MTBUR"})
 
-st.table(mtbur)
+# Best and worst component
+best_idx = mtbur['MTBUR'].idxmax()
+worst_idx = mtbur['MTBUR'].idxmin()
+
+best_component = mtbur.loc[best_idx, 'compoennt_name']
+worst_component = mtbur.loc[worst_idx, 'component_name']
 
 col1, col2, col3, col4, col5 = st.columns(5)
 col1.metric("Total Failures (2024)", total_failures)
