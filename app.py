@@ -171,13 +171,13 @@ for comp in components:
             x = "month",
             y = "unscheduled_removal",
             mode = "lines",
-            line = dict(widht=2),
-            marker_color = "navy"
+            marker_color = "navy",
+            line = dict(width=2)
         )
     )
     fig.update_layout(
-        x_axis = dict(title = "Month", tickangle = 45),
-        y_axis = dict(title = "Unscheduled Removal", side = "left"),
+        xaxis = dict(title = "Month", tickangle = 45),
+        yaxis = dict(title = "Unscheduled Removal", side = "left"),
         height = 300
     )
     st.plotly_chart(fig, use_container_width=True)
