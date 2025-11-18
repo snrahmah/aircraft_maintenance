@@ -66,7 +66,10 @@ with col2:
     df['ata_chapter'] = df['ata_chapter'].astype(str)
     failure_per_ata = df.groupby('ata_chapter')['unscheduled_removal'].sum().reset_index()
 
-    chart = alt.Chart(failure_per_ata).mark_bar(color="navy").encode(x="ata_chapter", y="unscheduled_removal")
+    st.subheader("Unschedulued Removal per ATA")
+    chart = alt.Chart(failure_per_ata).mark_bar(color="navy").encode(
+        x=alt.X('ata_chapter:N', title = 'ATA', axis = alt.Axis(labelAngle=0))
+        y=alt.Y('unscheduled_removal:Q', title='Unscheduled Removal Count'))
     st.altair_chart(chart, use_container_width=True)
 
 # 3. Avg Downtime per Component
