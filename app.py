@@ -57,7 +57,8 @@ with col1:
         y="unscheduled_removal",
         title="",
         labels={"unscheduled_removal": "Failure Count", "month": "Month"},
-        marker_color = "green"
+        color_discrete_sequence=["YellowGreen"]
+
     )
     st.plotly_chart(fig1, use_container_width=True)
 
