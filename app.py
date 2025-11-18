@@ -209,7 +209,7 @@ fig = px.histogram(
     df,
     x = "hours_since_install",
     nbins = 20,
-    labels = {"hours_since_install": "Hours Since Install}   
+    labels = {"hours_since_install": "Hours Since Install"}   
 )
 fig.update_traces(marker_color="navy")
 st.plotly_chart(fig, use_container_width=True)
