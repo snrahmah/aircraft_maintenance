@@ -211,7 +211,12 @@ fig = px.histogram(
     nbins = 20,
     labels = {"hours_since_install": "Hours Since Install"}   
 )
-fig.update_traces(marker_color="navy")
+fig.update_traces(marker_color="navy", marker_line_width = 1, marker_line_color="white")
+fig.update_layout(
+    xaxis = dict(showgrid= True),
+    yaxis = dict(showgrid= True),
+    bargap = 0.02
+)
 st.plotly_chart(fig, use_container_width=True)
 
 
@@ -225,6 +230,7 @@ for i, txt in enumerate(mtbur.index):
 ax.set_xlabel("MTBUR")
 ax.set_ylabel("Average Downtime (MTTR)")
 st.pyplot(fig)
+
 
 # ==========================
 # Component Detail Explorer
