@@ -169,7 +169,7 @@ fig = px.scatter(
     x="MTBUR",
     y="MTTR",
     text="component_name",
-    labels={"MTBUR": "MTBUR", "MTTR": "Average Downtime (MTTR)"},
+    labels={"MTBUR": "MTBUR", "MTTR": "MTTR"},
     color_discrete_sequence=["navy"]
 )
 
