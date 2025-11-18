@@ -26,6 +26,7 @@ total_downtime = df['downtime_hours'].sum()
 
 mtbur = df.groupby('component_name').apply(
     lambda x: x['hours_since_install'].sum() / max(x['unscheduled_removal'].sum(), 1)).reset_index()
+mtbur = mtbur.rename(columns={0: "MTBUR"})
 
 st.table(mtbur)
 
