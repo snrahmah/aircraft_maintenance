@@ -64,6 +64,7 @@ with col2:
     # 2. Failure Count per ATA Chapter
     df['ata_chapter'] = df['ata_chapter'].astype(str)
     failure_per_ata = df.groupby('ata_chapter')['unscheduled_removal'].sum().reset_index()
+    st.table(failure_per_ata, use_container_width=True)
 
 # 3. Avg Downtime per Component
 avg_downtime = df.groupby('component_name')['downtime_hours'].mean()
