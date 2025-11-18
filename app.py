@@ -167,8 +167,9 @@ for comp in components:
     fig = go.Figure()
     fig.add_trace(
         go.Scatter(
-            x = trend["month"],
-            y = trend["unscheduled_removal"],
+            trend,
+            x = "month",
+            y = "unscheduled_removal,
             mode = "lines",
             line = dict(widht=2),
             marker_color = "navy"
