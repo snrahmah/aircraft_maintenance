@@ -132,9 +132,9 @@ fig.add_trace(
         y = cumulative_percent,
         name = "Cumulative %",
         mode="lines+markers",
-        marker_color = "gold",
         yaxis="y2",
-        line = dict(width=2)
+        line = dict(width=2),
+        marker_color = "gold"
     )
 )
 
