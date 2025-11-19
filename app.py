@@ -244,7 +244,8 @@ fig= px.histogram(
     comp_data,
     x = "hours_since_install", 
     nbins = 15,
-    labels = {"hours_since_install": "Hours Since Install"}
+    labels = {"hours_since_install": "Hours Since Install"},
+    title = "Life Distribution"
 )
 fig.update_traces(marker_color="navy", marker_line_width=1, marker_line_color="white")
 fig.update_layout(
@@ -261,7 +262,8 @@ fig = px.line(
     y = monthly_trend.values,
     labels ={"x":"Month", "y": "Unscheduled Removal Count"},
     color_discrete_sequence=["navy"],
-    height = 300
+    height = 300,
+    title = "Unscheduled Removal Trend"
 )
 st.plotly_chart(fig, use_container_width = True)
 
