@@ -174,7 +174,7 @@ fig = px.scatter(
 )
 
 # component_name in scatter
-fig.update_traces(textposition='top center')
+fig.update_traces(marker = dict(size=12), textposition='top center')
 
 st.plotly_chart(fig, use_container_width=True)
 
