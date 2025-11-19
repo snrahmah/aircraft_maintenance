@@ -78,7 +78,7 @@ with col2:
         y=alt.Y('unscheduled_removal:Q', title='Unscheduled Removal Count')).properties(height=400)
     st.altair_chart(chart)
 
-# 5. Pareto Chart – Unscheduled Removal per Component
+# 3. Pareto Chart – Unscheduled Removal per Component
 st.subheader("Pareto Chart – Unscheduled Removal per Component")
 
 # Pareto
@@ -132,8 +132,10 @@ fig.update_layout(
 
 st.plotly_chart(fig, use_container_width=True)
 
-# 3. Avg Downtime per Component (MTTR)
+# 4. Avg Downtime per Component (MTTR)
 avg_downtime = df.groupby('component_name')['downtime_hours'].mean()
+avg_downtime = avg_downtime.sort_values(ascending=False)
+
 st.subheader("Mean Time To Repair (MTTR)")
 fig = px.bar(
     x = avg_downtime.index,
@@ -143,7 +145,8 @@ fig = px.bar(
 )
 st.plotly_chart(fig, use_container_width = True)
 
-# 4. MTBUR per Component
+# 5. MTBUR per Component
+mtbur1 = mtbur.sort_values(ascending=False)
 st.subheader("MTBUR per Component")
 fig = px.bar(
     x = mtbur.index,
@@ -154,7 +157,7 @@ fig = px.bar(
 st.plotly_chart(fig)
 
 
-# 9. MTBUR vs MTTR Scatter
+# 6. MTBUR vs MTTR Scatter
 st.subheader("MTBUR vs MTTR")
 mttr = df.groupby('component_name')['downtime_hours'].mean()
 
@@ -180,7 +183,7 @@ st.plotly_chart(fig, use_container_width=True)
 
 
 
-# 6. Reliability Trend per Component
+# 7. Reliability Trend per Component
 st.subheader("Reliability Trend per Component")
 components = st.multiselect("Select Components", df['component_name'].unique(), default=df['component_name'].unique()[:1])
 for comp in components:
@@ -203,7 +206,7 @@ for comp in components:
     st.plotly_chart(fig, use_container_width=True)
 
 
-# 7. Age vs Removal
+# 8. Age vs Removal
 st.subheader("Age Distribution: Removed vs Not Removed")
 fig = px.box(
     df,
