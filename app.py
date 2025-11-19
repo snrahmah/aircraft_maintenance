@@ -266,11 +266,11 @@ fig = px.line(
     labels ={"x":"Month", "y": "Unscheduled Removal Count"},
     color_discrete_sequence=["navy"],
     height = 300,
-    title = "Unscheduled Removal Trend"
+    title = "Reliability Trend"
 )
 st.plotly_chart(fig, use_container_width = True)
 
 st.markdown("""
-**Note:** This dataset is **synthetic** and is for **learning and demonstration purpose only**.
+**Disclaimer:** This dataset is **synthetic** and is for **learning and demonstration purpose only**.
 It does **not represent real aircrat maintenance data**.
 """)
