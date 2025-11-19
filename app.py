@@ -8,8 +8,11 @@ import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 import altair as alt
 
-st.set_page_config(layout="wide")
-st.title("Aircraft Maintenance Dashboard 2024")
+st.set_page_config(
+    page_title="Aircraft Maintenance Dashboard",
+    page_icon="✈️",
+    layout="wide"
+)
 
 # ==========================
 # Load Dataset
