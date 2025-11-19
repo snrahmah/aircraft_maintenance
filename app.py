@@ -224,30 +224,16 @@ fig.update_xaxes(
 st.plotly_chart(fig, use_container_width=True)
 
 
-# 8. Life Distribution Histogram
-st.subheader("Life Distribution of Components")
-fig = px.histogram(
-    df,
-    x = "hours_since_install",
-    nbins = 20,
-    labels = {"hours_since_install": "Hours Since Install"}   
-)
-fig.update_traces(marker_color="navy", marker_line_width = 1, marker_line_color="white")
-fig.update_layout(
-    xaxis = dict(showgrid= True),
-    yaxis = dict(showgrid= True),
-    bargap = 0.02
-)
-st.plotly_chart(fig, use_container_width=True)
-
-
 
 # ==========================
 # Component Detail Explorer
 # ==========================
+
 st.header("Component Detail Explorer")
+
 selected_comp = st.selectbox("Select Component", df['component_name'].unique())
 comp_data = df[df['component_name']==selected_comp]
+
 st.write(f"**Total Unscheduled Removal:** {comp_data['unscheduled_removal'].sum()}")
 st.write(f"**Total Downtime Hours:** {comp_data['downtime_hours'].sum()}")
 comp_mtbur = comp_data['hours_since_install'].sum() / max(comp_data['unscheduled_removal'].sum(),1)
